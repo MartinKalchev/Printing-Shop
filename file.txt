@@ -1,0 +1,8 @@
+The price of Big Book of Science is: 40
+The price of Big Book of Fantasy is: 100
+The price of Book of Folklore is: 15
+The price of Lord of The Rings is: 110
+The price of NY Times is: 24
+The total cost is:3289
+The revenue is:386
+Total salary cost is: 3200
