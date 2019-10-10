@@ -1,4 +1,4 @@
-
+// this is a custom exception handler which checks if the paper in the printing machines is enough to print the given items.
 public class NotEnoughPaper extends Exception{
 
 	private int maxNumberPaper;
