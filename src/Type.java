@@ -1,4 +1,4 @@
-// This is a enum class for the type of the paper which is printed in the shop 
+// This is a enum class for the type of the paper and it's price which is printed in the shop 
 public enum Type {
 
 	NORMAL(0.05),GLANCED(0.25),NEWSPAPER(0.15);
