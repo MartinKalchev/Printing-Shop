@@ -1,3 +1,4 @@
+// the class in which the printing machine is defined with all it's attributes and functions
 import java.util.List;
 import java.util.ArrayList;
 
@@ -68,7 +69,8 @@ public class PrintingMachine{
 		}
 	}
 		
-	
+	// function that starts the printing of the items.
+	// it is synchronized because the two machines use the same resource at the ame time
 	public synchronized void print()throws NotEnoughPaper{
 		for(Publishing p : publishings) {
 			if(this.getCurrentNumPaper() > p.getN_pages()) {
