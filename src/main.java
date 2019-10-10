@@ -11,27 +11,31 @@ import java.util.Scanner;
 public class main {
 
 	public static void main(String[] args) throws NotEnoughPaper, IOException {
+		// initialization of the paper formats
 		Format f1 = Format.A1;
 		Format f2 = Format.A2;
 		Format f3 = Format.A3;
 		Format f4 = Format.A4;
 		Format f5 = Format.A5;
 		
+		// initialization of the paper types
 		Type t1 = Type.GLANCED;
 		Type t2 = Type.NORMAL;
 		Type t3 = Type.NEWSPAPER;
 		
+		// initializing a couple of employees
 		Employee e1 = Employee.OPERATOR;
 		Employee e2 = Employee.OPERATOR;
 		Employee e3 = Employee.MANAGER;
 		
-		
+		// defining items to be printed in the shop
 		Publishing book1 = new Publishing("Big Book of Science",200,f3,t2);
 		Publishing book2 = new Publishing("Big Book of Fantasy",200,f4,t1);
 		Publishing book3 = new Publishing("Book of Folklore",100,f2,t2);
 		Publishing book4 = new Publishing("Lord of The Rings",220,f4,t1);
 		Publishing newspaper = new Publishing("NY Times",55,f5,t3);
 		
+		// defining the publisher and adding the items for publishing and the employees
 		Publisher p1 = new Publisher();
 		p1.addPublishing(book1);
 		p1.addPublishing(book2);
@@ -43,6 +47,7 @@ public class main {
 		p1.addEmployee(e3);
 		
 		
+		// a file to save all the information regarding the shop in
 		File file = new File("file.txt");
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
@@ -90,7 +95,7 @@ public class main {
 		bw.write("Total salary cost is: " + (int) sal);
 		bw.newLine();
 		
-		
+		// initializing the printing machines and the max number of paper in them and what type of paper they can print
 		PrintingMachine machine1 = new PrintingMachine(1000,"Machine 1");
 		PrintingMachine machine2 = new PrintingMachine(1000,"Machine 2");
 		machine1.setNormal_paper(true);
@@ -98,6 +103,7 @@ public class main {
 		machine1.setCurrentNumPaper(1000);
 		machine2.setCurrentNumPaper(800);
 		
+		// add the items in the machines to start printing
 		machine1.addPublishings(book1);
 		machine1.addPublishings(book2);
 		machine1.addPublishings(newspaper);
@@ -110,6 +116,8 @@ public class main {
 		
 		p1.addMachines(machine1);
 		p1.addMachines(machine2);
+		
+	// starting the thread function
 	    p1.publish();
 	
 	    System.out.println();
