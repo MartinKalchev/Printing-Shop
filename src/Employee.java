@@ -1,4 +1,4 @@
-
+// this is a enum class for the two types of employees working in the printing shop and their base salaries.
 public enum Employee {
 
 	OPERATOR(1000),MANAGER(1000);
