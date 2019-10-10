@@ -45,6 +45,7 @@ public class Publishing {
 		this.t = t;
 	}
 	
+// function that computes the price of every single page  and the total expenditure for the printing of the given item for the printing shop
 	public double PaperPrice() {
 		double price = 0;
 		for(int i = 0;i<n_pages;i++) {
