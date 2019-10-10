@@ -1,4 +1,4 @@
-
+// This is the class in which the item to be published by the shop is defined with all it's attributes.
 public class Publishing {
 
 	private String title;
